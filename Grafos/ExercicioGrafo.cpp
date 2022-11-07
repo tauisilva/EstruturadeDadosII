@@ -8,35 +8,32 @@
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
-
-int menu, tamanho, matriz[100] [100];
-
-int MenuPrincipal(){
-    //
+int tamanho;
+int Menu(){
     system("cls");
-    printf("===================Matriz===================\n");
-    printf("1: Inicializar a Matriz\n");
-    printf("2: Imprimir a Matriz\n");
-    printf("3: Inserir valor na Matriz\n");
-    printf(".\n");
-    printf("4:Sair\n");
-    printf("============================================\n");
+    printf("\n ===== Menu de Controle ===== ");
+    printf("\n = 1: Inicializar a matriz   =");
+    printf("\n = 2: Imprimir a matriz      =");
+    printf("\n = 3: Inserir valor na matriz ");
+    printf("\n = 4: Percorrer a matriz     =");
+    printf("\n = 5: Identificar menor      =");
+    printf("\n = 0: Sair do programa       =");
+    printf("\n =============================");
     printf("\nDigite a opcao desejada: ");
-    scanf("%d",&menu);
-    return(menu);
-}
-
-void CriarMatriz(int ordem){
-    
-}
-
-void imprimirMatriz(){
-
-}
-void GravarValor(int linha, int coluna, int valor){
-
+    int resposta;
+    scanf("%i", &resposta);
+    return  resposta;
 }
 
 int main(){
-    MenuPrincipal();
+    int resposta;
+    do{
+       resposta = Menu();
+       if(resposta == 1){
+        printf("Informe o tamanho do grafo: ");
+        scanf("%i", &tamanho);
+       }
+
+    } while (resposta != 0);
+   
 }
