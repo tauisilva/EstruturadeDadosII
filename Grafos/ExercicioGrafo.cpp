@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
-int tamanho;
+int tamanho, matriz[100][100];
 int Menu(){
     system("cls");
     printf("\n ===== Menu de Controle ===== ");
@@ -25,13 +25,22 @@ int Menu(){
     return  resposta;
 }
 
-int main(){
+void LimparMatriz(){
+    for(int linha=1;linha<=tamanho;linha++){
+        for(int coluna=1;coluna<=tamanho;coluna++){
+            matriz[linha][coluna] = 0;
+        }
+    }
+}
+
+int Main(){
     int resposta;
     do{
        resposta = Menu();
        if(resposta == 1){
         printf("Informe o tamanho do grafo: ");
         scanf("%i", &tamanho);
+        LimparMatriz();
        }
 
     } while (resposta != 0);
