@@ -13,7 +13,7 @@ void LimpMatriz();
 void ImprimirMatriz();
 void GravarValor(int A,int B,int C);
 void Dados();
-void ProcurarMatriz();
+int ProcurarMatriz(int Origem, int Destino, int Qtd, char caminho[30]);
 void MenorVlr();
 //ASSINATURAS
 
@@ -40,6 +40,7 @@ int Menu(){
     printf("\n= 3: Inserir valor na matriz  =");
     printf("\n= 4: Percorrer a matriz       =");
     printf("\n= 5: Identificar menor        =");
+    printf("\n= 6: Alimentar Matriz         =");
     printf("\n= 0: Sair do programa         =");
     printf("\n===============================");
     printf("\nDigite a opcao desejada: ");
@@ -97,9 +98,19 @@ void Dados(){
             lin= -1;
             col= -1;        
         }else if(opcao==4){
-            ProcurarMatriz();
+            printf("Percorrer na matriz");
+            int ProcurarMatriz(int Origem, int Destino, int Qtd, char caminho[30]);
         }else if(opcao==5){
             MenorVlr();
+        }else if(opcao==6){
+            matriz [1][6] = 1;
+            matriz [2][5] = 2;
+            matriz [3][4] = 3;
+            matriz [4][3] = 4;
+            matriz [5][2] = 5;
+            matriz [6][1] = 6;
+            printf("Matriz Populada!");
+            getch();
         }
     }while(opcao !=0);
     printf("\nOk, Obrigado e ate a proxima...");
@@ -153,23 +164,10 @@ void GravarValor(int A,int B,int C){
     printf("\nPressione uma tecla para prosseguir...");
     getch();
 }
-void ProcurarMatriz(){
-    printf("\nProcurar um Valor na Matriz");
-    printf("\nInforme a posicao da linha: ");
-    scanf("%i", &lin);
-    printf("\nInforme a posicao da coluna: ");
-    scanf("%i", &col);
-    printf("\nA posicao informada [%i,%i] esta com o valor: %i", matriz[lin][col], vlr);
-    // if ((lin==col) & (lin>0)){
-    //     printf("\nA posicao informada e invalida [%i,%i]", matriz[lin][col]);
-    // }else if(lin>tamanho){
-    //     printf("\nA posicao informada e invalida [%i,%i]", matriz[lin][col]);
-    // }else if(col>tamanho){
-    //     printf("\nA posicao informada e invalida [%i,%i]", matriz[lin][col]);
-    // }else{
-    //     printf("\nA posicao informada [%i,%i] esta com o valor: %i", matriz[lin][col], vlr);
-    // }
-    getch();    
+int ProcurarMatriz(int Origem, int Destino, int Qtd, char caminho[30]){
+    do{
+        
+    }while();
 }
 
 void MenorVlr(){
